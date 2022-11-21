@@ -1,11 +1,9 @@
 from PIL import Image
 import numpy as np
 import pandas as pd
-import matplotlib.pyplot as plt
 import streamlit as st
 import nltk
 import altair as alt
-import plotly.express as px
 import os
 nltk.download('punkt')
 
@@ -17,7 +15,7 @@ from nltk.probability import FreqDist
 st.write('## Analyzing Shakespeare texts')
 
 # Creating a dictionary not a list 
-books = {" ":" ","A Mid Summer Night's Dream":"data/summer.txt","The Merchant of Venice":"data/merchant.txt","Romeo and Juliet":"data/romeo.txt"}
+books = {" ":" ","A Mid Summer Night's Dream":"summer.txt","The Merchant of Venice":"merchant.txt","Romeo and Juliet":"romeo.txt"}
 image = st.selectbox('Choose a txt file', books.keys())
 
 image = books.get(image)
