@@ -4,7 +4,6 @@ import pandas as pd
 import streamlit as st
 import nltk
 import altair as alt
-import os
 nltk.download('punkt')
 
 from wordcloud import WordCloud, STOPWORDS, ImageColorGenerator
@@ -15,7 +14,7 @@ from nltk.probability import FreqDist
 st.write('## Analyzing Shakespeare texts')
 
 # Creating a dictionary not a list 
-books = {" ":" ","A Mid Summer Night's Dream":"summer.txt","The Merchant of Venice":"merchant.txt","Romeo and Juliet":"romeo.txt"}
+books = {" ":" ","A Mid Summer Night's Dream":"data/summer.txt","The Merchant of Venice":"data/merchant.txt","Romeo and Juliet":"data/romeo.txt"}
 image = st.selectbox('Choose a txt file', books.keys())
 
 image = books.get(image)
